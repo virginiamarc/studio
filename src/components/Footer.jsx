@@ -67,7 +67,7 @@ const Footer = () => {
             </Logo>
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © PRAN SWEN DE OU LLC. All rights reserved. {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

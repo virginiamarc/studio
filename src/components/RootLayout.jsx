@@ -27,7 +27,11 @@ const Header = ({
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href={"/"} aria-label="Home">
-          <Logo invert={invert}>Studio_clone</Logo>
+          <img
+            src="/logo-psd.svg"
+            alt="PSD Studio logo"
+            className={`h-20 w-auto ${invert ? "brightness-0 invert" : ""}`}
+          />
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href={"/contact"} invert={invert}>
