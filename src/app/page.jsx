@@ -1,7 +1,7 @@
 import Clients from "@/components/Clients";
 import ContactSection from "@/components/ContactSection";
 import Container from "@/components/Container";
-import FadeIn from "@/components/FadeIn";
+import FadeIn, { FadeInStagger } from "@/components/FadeIn";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 
@@ -19,27 +19,42 @@ export default function Home() {
         </FadeIn>
       </Container>
       <Clients />
-      <Testimonials
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: "Jacqueline P.", logo: null }}
-      >
-        I appreciate you so much and I will not forget your professional
-        experience and the value that you have shared with me.
-      </Testimonials>
 
-      <Testimonials
-        client={{ name: "Barbara P." }}
-      >
-        Virginia delivered exactly what we needed and made the process
-        incredibly smooth.
-      </Testimonials>
+      <section className="py-32 bg-white">
+        <div className="mx-auto max-w-7xl rounded-3xl bg-gradient-to-b from-[#C85ACF] to-[#6A2A82] text-white p-20 shadow-xl shadow-black/20">
+          <FadeIn>
+            <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight text-white mb-12">
+              What clients are saying
+            </h2>
+          </FadeIn>
 
-      <Testimonials
-        client={{ name: "Giovanna L." }}
-      >
-        Working with Virginia was a joy. She is professional, fast, and
-        truly cares about her clients.
-      </Testimonials>
+          <FadeInStagger faster>
+            <div className="space-y-10">
+              <FadeIn>
+                <Testimonials client={{ name: "Jacqueline P." }}>
+                  I appreciate you so much and I will not forget your professional
+                  experience and the value that you have shared with me.
+                </Testimonials>
+              </FadeIn>
+
+              <FadeIn>
+                <Testimonials client={{ name: "Barbara P." }}>
+                  Virginia delivered exactly what we needed and made the process
+                  incredibly smooth.
+                </Testimonials>
+              </FadeIn>
+
+              <FadeIn>
+                <Testimonials client={{ name: "Giovanna L." }}>
+                  Working with Virginia was a joy. She is professional, fast, and
+                  truly cares about her clients.
+                </Testimonials>
+              </FadeIn>
+            </div>
+          </FadeInStagger>
+        </div>
+      </section>
+
       <Services />
       <ContactSection />
     </main>

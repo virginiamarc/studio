@@ -28,25 +28,19 @@ const GridPattern = ({ yOffset = 0, interactive = false, ...props }) => {
   ];
   return (
     <svg ref={ref} aria-hidden="true" {...props}>
-      <rect width="100%" height="100%" fill={`url(#${id})`} strokeWidth="0" />
-      
-      <defs>
-        <pattern
-          id={id}
-          width="40"
-          height="40"
-          patternUnits="userSpaceOnUse"
-          patternTransform={`translate(0 ${yOffset})`}
-        >
-          <path
-            d="M0 40 L40 0"
-            stroke="#7A2F8F"
-            strokeWidth="1"
-            opacity="0.15"
-          />
-        </pattern>
+      <rect
+        width="100%"
+        height="100%"
+        fill="url(#gradient)"
+      />
 
+      <defs>
+        <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#C85ACF" />
+          <stop offset="100%" stopColor="#6A2A82" />
+        </linearGradient>
       </defs>
+
     </svg>
   );
 };
