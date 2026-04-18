@@ -4,12 +4,19 @@ import clsx from "clsx";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
 import Image from "next/image";
+import { Dancing_Script } from "next/font/google";
+
+const dancing = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 
 const Testimonials = ({ children, client, className }) => {
   return (
     <div
       className={clsx(
-        "relative isolate bg-neutral-50 py-16 sm:py-28 md:py-32",
+        "relative isolate bg-neutral-50 py-8 sm:py-12 md:py-16",
         className
       )}
     >
@@ -21,13 +28,18 @@ const Testimonials = ({ children, client, className }) => {
         <FadeIn>
           <figure className="mx-auto max-w-4xl">
             <blockquote className="relative font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-              <p className="before:content-['“'] after:content-['”'] sm:before:absolute sm:before:right-full">
-                {children}
+              <p>
+                <span className="before:content-['“'] after:content-['”']">
+                  {children}
+                </span>
+
+                <span
+                  className={`${dancing.className} ml-3 text-3xl font-bold text-neutral-900`}
+                >
+                  — {client.name}
+                </span>
               </p>
             </blockquote>
-            <figcaption className="mt-10">
-              <Image src={client.logo} alt={client.name} unoptimized />
-            </figcaption>
           </figure>
         </FadeIn>
       </Container>

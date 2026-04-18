@@ -4,7 +4,6 @@ import Container from "@/components/Container";
 import FadeIn from "@/components/FadeIn";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
-import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
 
 export default function Home() {
   return (
@@ -22,11 +21,24 @@ export default function Home() {
       <Clients />
       <Testimonials
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: "Phobia", logo: logoPhobiaDark }}
+        client={{ name: "Jacqueline P.", logo: null }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user microphone without triggering one of
-        those annoying permission dialogs.
+        I appreciate you so much and I will not forget your professional
+        experience and the value that you have shared with me.
+      </Testimonials>
+
+      <Testimonials
+        client={{ name: "Barbara P." }}
+      >
+        Virginia delivered exactly what we needed and made the process
+        incredibly smooth.
+      </Testimonials>
+
+      <Testimonials
+        client={{ name: "Giovanna L." }}
+      >
+        Working with Virginia was a joy. She is professional, fast, and
+        truly cares about her clients.
       </Testimonials>
       <Services />
       <ContactSection />
