@@ -62,9 +62,11 @@ const Footer = () => {
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href={"/"} aria-label="Home">
-            <Logo className="h-8" fillOnHover>
-              Studio_clone
-            </Logo>
+            <img
+              src="/logo-psd.svg"
+              alt="PSD Studio logo"
+              className="h-12 w-auto transition hover:opacity-80"
+            />
           </Link>
           <p className="text-sm text-neutral-700">
             © PRAN SWEN DE OU LLC. All rights reserved. {new Date().getFullYear()}

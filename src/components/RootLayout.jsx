@@ -9,7 +9,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import Button from "./Button";
 import clsx from "clsx";
-import Offices from "./Offices";
+import Office from "./Office";
 import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
 
@@ -125,7 +125,7 @@ const RootLayoutInner = ({ children }) => {
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14"
           aria-hidden={expanded ? "true" : undefined}
-          inert={expanded ? "" : undefined}
+          inert={expanded}
         >
           {/* Header */}
           <Header
@@ -147,7 +147,7 @@ const RootLayoutInner = ({ children }) => {
           style={{ height: expanded ? "auto" : "0.5rem" }}
           className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
           aria-hidden={expanded ? undefined : "true"}
-          inert={expanded ? undefined : ""}
+          inert={!expanded}
         >
           <motion.div layout className="bg-neutral-800">
             <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
@@ -172,11 +172,11 @@ const RootLayoutInner = ({ children }) => {
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
+                      Our office
                     </h2>
-                    <Offices
+                    <Office
                       invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
+                      className="mt-6"
                     />
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">

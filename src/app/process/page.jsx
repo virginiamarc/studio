@@ -11,9 +11,10 @@ const ProcessPage = () => {
     <>
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          Our process is built on clarity, collaboration, and thoughtful execution.
+          Every project begins with understanding your goals, continues with
+          intentional design and development, and ends with a polished, reliable
+          product that’s ready to grow with you.
         </p>
       </PageIntro>
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">

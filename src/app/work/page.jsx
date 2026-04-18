@@ -6,12 +6,14 @@ const WorkPage = () => {
     <>
       <PageIntro
         eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        title="Digital experiences crafted with intention."
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          At PSD Studio, every project is built with clarity, precision, and a
+          deep respect for thoughtful design. From full‑stack applications to
+          nonprofit websites and modern UI experiences, our work reflects a
+          commitment to clean architecture, accessible interfaces, and
+          real‑world impact.
         </p>
       </PageIntro>
     </>
