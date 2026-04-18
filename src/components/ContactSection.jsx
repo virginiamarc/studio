@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
 import Button from "./Button";
-import Offices from "./Office";
+import Office from "./Office";
 
 const ContactSection = () => {
   return (
@@ -14,14 +14,14 @@ const ContactSection = () => {
           </h2>
           <div className="mt-6 flex">
             <Button href={"/contact"} invert>
-              Say Hello
+              Start Your Project
             </Button>
           </div>
           <div className="mt-10 border-t border-white/10 pt-10">
             <h3 className="font-display text-base font-semibold text-white">
-              Our offices
+              Our office
             </h3>
-            <Offices
+            <Office
               invert
               className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
             />
