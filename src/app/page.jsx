@@ -7,11 +7,11 @@ import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
-    <main className="text-black">
+    <main className="text-neutral-900">
       <Container className="mt-32 sm:mt-40">
         <FadeInStagger>
           <FadeIn className="max-w-3xl">
-            <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+            <h1 className="font-display text-5xl font-semibold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
               Empowering brands with strategy, creativity, and digital innovation.
             </h1>
             <p className="mt-6 text-xl text-neutral-600">

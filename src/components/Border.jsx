@@ -23,7 +23,5 @@ const Border = ({
       {...props}
     />
   );
-};
-
+}
 export default Border;
-22
