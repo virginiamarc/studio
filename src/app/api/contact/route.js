@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/src/lib/mongodb";
+import { connectToDatabase } from "@/lib/mongodb";
 import Contact from "@/models/Contact";
 
 

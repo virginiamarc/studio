@@ -1,5 +1,5 @@
-import { connectToDatabase } from "@/src/lib/mongodb";
-import Client from "@/src/models/Client";
+import { connectToDatabase } from "@/lib/mongodb";
+import Client from "@/models/Client";
 
 export async function POST(req) {
   try {
