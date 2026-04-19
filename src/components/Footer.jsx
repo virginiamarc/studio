@@ -26,7 +26,7 @@ const NewsletterForm = () => {
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email.trim()) {
@@ -37,13 +37,27 @@ const NewsletterForm = () => {
     setError("");
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setSubmitted(true);
-      setIsSubmitting(false);
-      setEmail("");
-    }, 800);
-  };
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
 
+      const data = await res.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setEmail("");
+      } else {
+        setError(data.message || "Something went wrong");
+      }
+    } catch (err) {
+      setError("Network error");
+    }
+
+    setIsSubmitting(false);
+  };
   return (
     <form onSubmit={handleSubmit} className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
