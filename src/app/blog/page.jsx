@@ -25,12 +25,12 @@ export default async function BlogPage() {
             href={`/blog/${post.slug}`}
             className="group block overflow-hidden rounded-2xl shadow-lg transition hover:shadow-xl"
           >
-            <div className="relative h-56 w-full overflow-hidden">
+            <div className="relative aspect-[16/9] w-full overflow-hidden">
               <Image
                 src={post.image}
                 alt={post.title}
                 fill
-                className="object-cover transition duration-300 group-hover:scale-105"
+                className="object-cover object-[50%_15%] transition duration-300 group-hover:scale-105"
               />
             </div>
 
@@ -44,18 +44,6 @@ export default async function BlogPage() {
               </h3>
 
               <p className="mt-3 text-sm text-neutral-600">{post.excerpt}</p>
-
-              {/* ⭐ AUTHOR SECTION GOES HERE */}
-              <div className="mt-4 flex items-center gap-3">
-                <Image
-                  src={post.authorImage}
-                  alt={post.author}
-                  width={32}
-                  height={32}
-                  className="rounded-full object-cover"
-                />
-                <p className="text-sm text-neutral-700">{post.author}</p>
-              </div>
 
               <span className="mt-4 inline-block text-sm font-medium text-green-700 group-hover:text-green-900">
                 Read more →

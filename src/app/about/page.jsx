@@ -1,9 +1,11 @@
 import ContactSection from "@/components/ContactSection";
 import Container from "@/components/Container";
-import Cultures from "@/components/Cultures";
+import Principles from "@/components/Principles";
 import PageIntro from "@/components/PageIntro";
 import { StatList, StatListItem } from "@/components/StatList";
 import React from "react";
+import Founder from "@/components/Founder";
+
 
 const AboutPage = () => {
   return (
@@ -33,15 +35,17 @@ const AboutPage = () => {
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="6+" label="Years of experience" />
+          <StatListItem value="40+" label="Projects delivered" />
+          <StatListItem value="98%" label="Client satisfaction" />
         </StatList>
       </Container>
-      <Cultures />
+      <Principles />
+      <Founder />
       <ContactSection />
     </>
   );
 };
 
 export default AboutPage;
+11
