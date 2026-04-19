@@ -34,7 +34,7 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
@@ -43,10 +43,34 @@ const ContactForm = () => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setSubmitted(true);
-      setIsSubmitting(false);
-    }, 1000);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+          budget: "",
+        });
+      } else {
+        alert("Something went wrong.");
+      }
+    } catch (error) {
+      alert("Network error.");
+    }
+
+    setIsSubmitting(false);
+
   };
 
   return (
