@@ -11,8 +11,14 @@ export async function POST(req) {
       status: 201,
     });
   } catch (error) {
-    return new Response(JSON.stringify({ success: false, error }), {
-      status: 500,
-    });
+    console.error("FULL ERROR:", error);
+
+    return new Response(
+      JSON.stringify({
+        success: false,
+        message: error.message,
+      }),
+      { status: 500 }
+    );
   }
 }
