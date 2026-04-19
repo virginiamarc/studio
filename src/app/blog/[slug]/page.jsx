@@ -30,6 +30,7 @@ export default async function BlogPostPage({ params }) {
         alt={post.title}
         width={1200}
         height={600}
+        priority
         className="rounded-xl mb-10"
       />
 
