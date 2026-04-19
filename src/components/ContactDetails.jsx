@@ -25,7 +25,7 @@ const ContactDetails = () => {
             ["General inquiries", "pranswendeou@gmail.com"],
             ["Collaboration", "pranswendeou@gmail.com"],
           ].map(([label, email]) => (
-            <div key={email}>
+            <div key={label}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
               <dd>
                 <Link
