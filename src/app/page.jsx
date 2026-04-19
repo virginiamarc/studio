@@ -8,22 +8,24 @@ import Testimonials from "@/components/Testimonials";
 export default function Home() {
   return (
     <main className="text-black">
-      <Container className="mt-24 sm:mt-32">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Empowering brands with strategy, creativity, and digital innovation.
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            At PSD Studio, we help entrepreneurs and businesses elevate their identity through strategic design, thoughtful branding, and impactful digital experiences.
-          </p>
-        </FadeIn>
+      <Container className="mt-32 sm:mt-40">
+        <FadeInStagger>
+          <FadeIn className="max-w-3xl">
+            <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+              Empowering brands with strategy, creativity, and digital innovation.
+            </h1>
+            <p className="mt-6 text-xl text-neutral-600">
+              At PSD Studio, we help entrepreneurs and businesses elevate their identity through strategic design, thoughtful branding, and impactful digital experiences.
+            </p>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
       <Clients />
 
       <section className="py-32 bg-white">
-        <div className="mx-auto max-w-7xl rounded-3xl bg-gradient-to-b from-[#C85ACF] to-[#6A2A82] text-white p-20 shadow-xl shadow-black/20">
+        <div className="mx-auto max-w-7xl rounded-3xl bg-gradient-to-b from-[#C85ACF] via-[#8E3CA8] to-[#6A2A82] text-white p-20 shadow-inner shadow-black/20">
           <FadeIn>
-            <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight text-white mb-12">
+            <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight text-white mb-16">
               What clients are saying
             </h2>
           </FadeIn>

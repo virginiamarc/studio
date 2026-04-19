@@ -26,7 +26,7 @@ const StylizedImage = ({ shape = 0, className, ...props }) => {
     <div
       className={clsx(
         className,
-        "relative flex aspect-[719/680] w-full grayscale"
+        "relative flex aspect-[719/680] w-full"
       )}
     >
       <svg viewBox={`0 0 ${width} ${height}`} fill="none" className="h-full">
@@ -41,6 +41,15 @@ const StylizedImage = ({ shape = 0, className, ...props }) => {
               />
             </foreignObject>
           </g>
+
+          {/* GRADIENT OVERLAY */}
+          <rect
+            width={width}
+            height={height}
+            fill={`url(#${id}-gradientOverlay)`}
+            className="mix-blend-multiply opacity-60"
+          />
+
           <use
             href={`#${id}-shape`}
             strokeWidth="2"
@@ -56,6 +65,11 @@ const StylizedImage = ({ shape = 0, className, ...props }) => {
               clipRule="evenodd"
             />
           </clipPath>
+          <linearGradient id={`${id}-gradientOverlay`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#C85ACF" />
+            <stop offset="100%" stopColor="#6A2A82" />
+          </linearGradient>
+
         </defs>
       </svg>
     </div>
