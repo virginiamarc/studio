@@ -12,8 +12,7 @@ export default function Layout({ children }) {
   return (
     <html
       lang="en"
-      className="h-full bg-neutral-950 text-base antialiased text-neutral-100"
-    >
+      className="h-full bg-gradient-to-b from-[#C85ACF] via-[#8E3CA8] to-[#6A2A82] text-neutral-100">
       <body className="flex min-h-full flex-col">
         <RootLayout>{children}</RootLayout>
       </body>

@@ -17,6 +17,8 @@ const Button = ({ invert, variant, href, className, children, ...props }) => {
       ? baseStyles.gradient
       : variant === "purple"
       ? baseStyles.purple
+      : variant === "invert"
+      ? baseStyles.invert
       : invert
       ? baseStyles.invert
       : baseStyles.default;

@@ -26,3 +26,4 @@ const Border = ({
 };
 
 export default Border;
+22
