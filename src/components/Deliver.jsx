@@ -1,55 +1,55 @@
 import React from "react";
 import Section from "./Section";
-import imageMeeting from "@/images/meeting.jpg";
+import imageDeliver from "@/images/deliver.png";
 import List, { ListItem } from "./List";
 
 const Deliver = () => {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 1 }}>
+    <Section title="Deliver" image={{ src: imageDeliver, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{" "}
-          <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
+          As the Build phase progresses, we transition into refinement—tightening
+          functionality, validating decisions, and preparing the product for a
+          confident launch. Any adjustments to{" "}
+          <strong className="font-semibold text-neutral-950">requirements</strong>{" "}
+          are handled with clarity and intention, ensuring the final experience
+          aligns with your goals.
         </p>
+
         <p>
-          Despite largely using pre-built components, most of the{" "}
+          Our team brings every component together with precision. While much of
+          the groundwork is established early, the final stretch is where the
+          product takes shape—polished interactions, cohesive design, and
+          purposeful{" "}
           <strong className="font-semibold text-neutral-950">progress</strong>{" "}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on Twitter.
+          that reflects the strategy we set from the start.
         </p>
-        <p>
-          We ensure that the main pages of the site are{" "}
+         <p>
+          At launch, the core experience is{" "}
           <strong className="font-semibold text-neutral-950">
             fully functional
           </strong>{" "}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{" "}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{" "}
-          retainer.
+          and ready for real users. Additional pages and enhancements are rolled
+          out through our structured{" "}
+          <strong className="font-semibold text-neutral-950">maintenance</strong>{" "}
+          and support cycles, ensuring the product continues to evolve with your
+          business.
         </p>
       </div>
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Included in this phase
       </h3>
       <List>
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+        <ListItem title="Testing"> Every feature is reviewed, validated, and tested to ensure stability
+          and confidence at launch.
         </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+
+        <ListItem title="Infrastructure"> We deploy on reliable, scalable infrastructure tailored to your
+          project’s needs, ensuring performance from day one.
         </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+
+        <ListItem title="Support"> We provide ongoing support and guidance, helping your product grow,
+          adapt, and stay aligned with your long-term vision.
         </ListItem>
       </List>
     </Section>

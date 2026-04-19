@@ -38,7 +38,7 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        <Button type="submit" className="mt-10">
+        <Button type="submit" variant="gradient" className="mt-10">
           Start Your Project
         </Button>
       </form>
