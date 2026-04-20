@@ -13,7 +13,7 @@ const Founder = () => {
           {/* Photo */}
           <div className="relative aspect-[3/4] w-3/4 lg:w-2/3 mx-auto lg:ml-auto overflow-hidden rounded-3xl">
             <Image
-              src="/images/virginia.PNG"
+              src="/images/virginia-marc.png"
               alt="Virginia Marc — Founder of PSD Studio"
               fill
               quality={100}
