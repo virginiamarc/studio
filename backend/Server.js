@@ -14,10 +14,6 @@ connectDB();
 
 const app = express();
 
-// Required for __dirname in ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 app.use(
   cors({
     origin: [
@@ -30,9 +26,7 @@ app.use(
 
 app.use(express.json());
 
-// ⭐ STATIC FILES — THIS IS THE FIX ⭐
-// This now correctly points to backend/public/
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
 // Routes
 app.use("/api/contact", contactRoutes);
