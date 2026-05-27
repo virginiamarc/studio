@@ -1,25 +1,35 @@
 import express from "express";
-const router = express.Router();
 import Newsletter from "../models/Newsletter.js";
+import { sendEmail } from "../utils/sendEmail.js";
+
+const router = express.Router();
 
 router.post("/", async (req, res) => {
   try {
-    const { email } = req.body;
+    const subscriber = new Newsletter({ email: req.body.email });
+    await subscriber.save();
 
-    if (!email) {
-      return res.status(400).json({ success: false, message: "Email is required" });
-    }
+    // Notify YOU
+    await sendEmail({
+      to: "info@pranswendeou.com",
+      subject: "New Newsletter Subscriber",
+      html: `<p>New subscriber: <strong>${req.body.email}</strong></p>`,
+    });
 
-    const existing = await Newsletter.findOne({ email });
-    if (existing) {
-      return res.status(200).json({ success: true, message: "Already subscribed" });
-    }
+    // Auto‑response
+    await sendEmail({
+      to: req.body.email,
+      subject: "You're subscribed!",
+      html: `
+        <p>Thank you for subscribing to PSD Studio.</p>
+        <p>You’ll receive updates, resources, and inspiration soon.</p>
+      `,
+    });
 
-    await Newsletter.create({ email });
-
-    res.json({ success: true, message: "Subscribed successfully" });
-  } catch (error) {
-    res.status(500).json({ success: false, message: "Server error" });
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false });
   }
 });
 
