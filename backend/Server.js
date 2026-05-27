@@ -3,6 +3,9 @@ dotenv.config();
 
 import express from "express";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+
 import connectDB from "./config/db.js";
 import contactRoutes from "./routes/Contact.js";
 import newsletterRoutes from "./routes/Newsletter.js";
@@ -10,6 +13,10 @@ import newsletterRoutes from "./routes/Newsletter.js";
 connectDB();
 
 const app = express();
+
+// Required for __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
@@ -23,7 +30,9 @@ app.use(
 
 app.use(express.json());
 
-app.use(express.static("public"));
+// ⭐ STATIC FILES — THIS IS THE FIX ⭐
+// This now correctly points to backend/public/
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/api/contact", contactRoutes);
