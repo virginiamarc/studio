@@ -5,6 +5,8 @@ import express from "express";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import contactRoutes from "./routes/Contact.js";
+import newsletterRoutes from "./routes/Newsletter.js";
+import Newsletter from "./models/Newsletter.js";
 
 connectDB();
 
@@ -15,6 +17,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/contact", contactRoutes);
+app.use("/api/newsletter", newsletterRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
