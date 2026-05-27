@@ -18,8 +18,8 @@ router.post("/", async (req, res) => {
 
           <div style="text-align: center; margin-bottom: 24px;">
             <img 
-              src="https://studio-backend.onrender.com/logo-psd.png"
-              alt="PSD Studio"
+              src="https://studio-backend.onrender.com/images/logo-psd.png"
+              alt="PSD Studio logo"
               width="120"
               style="display:block; margin:0 auto; border:0; outline:none; text-decoration:none;"
             />
@@ -49,8 +49,8 @@ router.post("/", async (req, res) => {
         <div style="font-family: Inter, Arial, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px; border: 1px solid #e5e5e5; border-radius: 12px;">
           <div style="text-align: center; margin-bottom: 24px;">
             <img 
-              src="https://studio-backend.onrender.com/logo-psd.png"
-              alt="PSD Studio"
+              src="https://studio-backend.onrender.com/images/logo-psd.png"
+              alt="PSD Studio logo"
               width="120"
               style="display: block; margin: 0 auto; border: 0; outline: none; text-decoration: none;"
             />

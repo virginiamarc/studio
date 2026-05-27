@@ -3,9 +3,6 @@ dotenv.config();
 
 import express from "express";
 import cors from "cors";
-import path from "path";
-import { fileURLToPath } from "url";
-
 import connectDB from "./config/db.js";
 import contactRoutes from "./routes/Contact.js";
 import newsletterRoutes from "./routes/Newsletter.js";
@@ -26,6 +23,7 @@ app.use(
 
 app.use(express.json());
 
+// Serve static files from ROOT /public
 app.use(express.static("public"));
 
 // Routes
