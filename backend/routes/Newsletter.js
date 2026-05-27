@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
       html: `<p>New subscriber: <strong>${req.body.email}</strong></p>`,
     });
 
-    // Auto‑response
+    // Auto‑response to subscriber
     await sendEmail({
       to: req.body.email,
       subject: "You're subscribed!",
@@ -26,10 +26,18 @@ router.post("/", async (req, res) => {
       `,
     });
 
-    res.json({ success: true });
+    return res.json({ success: true });
   } catch (err) {
+    // Handle duplicate email gracefully
+    if (err.code === 11000) {
+      return res.json({
+        success: true,
+        message: "Already subscribed",
+      });
+    }
+
     console.error(err);
-    res.status(500).json({ success: false });
+    return res.status(500).json({ success: false });
   }
 });
 
