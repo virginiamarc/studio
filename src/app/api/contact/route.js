@@ -1,5 +1,5 @@
 import { connectToDatabase } from "@/lib/mongodb";
-import Contact from "@/models/Contact";
+import Contact from "../../../../backend/models/Contact";
 
 
 export async function POST(req) {
