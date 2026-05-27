@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 export const sendEmail = async ({ to, subject, html }) => {
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
