@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
           <p><strong>Name:</strong> ${req.body.name}</p>
           <p><strong>Email:</strong> ${req.body.email}</p>
           <p><strong>Company:</strong> ${req.body.company || "N/A"}</p>
-          <p><strong>Phone:</strong> ${req.body.phoneNumber}</p>
+          <p><strong>Phone:</strong> ${req.body.phone}</p>
           <p><strong>Budget:</strong> ${req.body.budget || "N/A"}</p>
           <p><strong>Message:</strong><br>${req.body.message}</p>
 
