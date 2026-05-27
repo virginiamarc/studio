@@ -23,7 +23,12 @@ router.post("/", async (req, res) => {
       html: `
         <div style="font-family: Inter, Arial, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px; border: 1px solid #e5e5e5; border-radius: 12px;">
           <div style="text-align: center; margin-bottom: 24px;">
-            <img src="https://studio.pranswendeou.com/logo.png" alt="PSD Studio" style="width: 120px; height: auto;" />
+            <img 
+              src="https://studio.pranswendeou.com/logo.png"
+              alt="PSD Studio"
+              width="120"
+              style="display: block; margin: 0 auto; border: 0; outline: none; text-decoration: none;"
+            />
           </div>
 
           <h2 style="color: #111; font-weight: 600; margin-bottom: 16px;">You're subscribed</h2>
