@@ -38,7 +38,7 @@ const NewsletterForm = () => {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/newsletter", {
+      const res = await fetch("https://studio-backend-rk21.onrender.com/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

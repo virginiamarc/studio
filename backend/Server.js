@@ -6,13 +6,21 @@ import cors from "cors";
 import connectDB from "./config/db.js";
 import contactRoutes from "./routes/Contact.js";
 import newsletterRoutes from "./routes/Newsletter.js";
-import Newsletter from "./models/Newsletter.js";
 
 connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://studio.pranswendeou.com",
+      "http://localhost:3000"
+    ],
+    methods: ["GET", "POST"],
+  })
+);
+
 app.use(express.json());
 
 // Routes
