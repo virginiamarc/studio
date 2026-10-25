@@ -13,7 +13,9 @@ export const navigation = [
             See all <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: "/work",
+        href: "https://portfolio.virginiamarc.com/",
+        target: "_blank",
+        rel: "noopener noreferrer",
       },
     ],
   },

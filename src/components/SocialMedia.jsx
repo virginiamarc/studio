@@ -31,7 +31,7 @@ export const SocialMediaProfiles = [
   },
   {
     title: "LinkedIn",
-    href: "",
+    href: "https://www.linkedin.com/in/virginiamarc/",
     icon: BsLinkedin,
     target: "_blank",
     rel: "noopener noreferrer",
