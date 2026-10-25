@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
 import FooterNavigation from "./FooterNavigation";
-import Logo from "./Logo";
 import Link from "next/link";
 
 const ArrowIcon = (props) => {
@@ -65,8 +64,8 @@ const NewsletterForm = () => {
       </h2>
 
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Subscribe for insights on web development, software
+        solutions, creative design, and digital innovation.
       </p>
 
       <div className="relative mt-6">
@@ -118,14 +117,15 @@ const Footer = () => {
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
             <img
-              src="/logo-psd.svg"
-              alt="PSD Studio logo"
-              className="h-12 w-auto transition hover:opacity-80"
+              src="/logo-psdo.png"
+              alt="PSDO Studio logo"
+              className="h-16 w-auto object-contain transition hover:opacity-80"
             />
           </Link>
-
+          
           <p className="text-sm text-neutral-700">
-            © PRAN SWEN DE OU LLC. All rights reserved. {new Date().getFullYear()}
+            © {new Date().getFullYear()} PSDO Studio.
+            A brand of PRAN SWEN DE OU LLC. All rights reserved.
           </p>
         </div>
       </FadeIn>

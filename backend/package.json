@@ -1,7 +1,7 @@
 {
   "name": "studio-backend",
   "version": "1.0.0",
-  "description": "Backend API for PSD Studio contact form",
+  "description": "Backend API for PSDO Studio contact forms, newsletter subscriptions, and email notifications",
   "main": "Server.js",
   "type": "module",
   "scripts": {

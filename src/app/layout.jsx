@@ -13,13 +13,33 @@ const monaSans = localFont({
   variable: "--font-mona",
 });
 
+
 export const metadata = {
+  metadataBase: new URL("https://studio.pranswendeou.com"),
+
   title: {
-    default: "PSD Studio",
-    template: "%s | PSD Studio",
+    default: "PSDO Studio | Web Development & Software Solutions",
+    template: "%s | PSDO Studio",
   },
+
   description:
-    "PSD Studio is a creative studio building modern digital experiences, branding, and design systems.",
+    "PSDO Studio specializes in custom website development, full-stack web applications, software solutions, and creative design for entrepreneurs and growing businesses.",
+
+  applicationName: "PSDO Studio",
+
+  openGraph: {
+    title: "PSDO Studio | Web Development & Software Solutions",
+    description:
+      "Custom websites, web applications, software solutions, and creative design. Transforming ideas into powerful digital experiences.",
+    url: "https://studio.pranswendeou.com",
+    siteName: "PSDO Studio",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function Layout({ children }) {

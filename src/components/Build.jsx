@@ -30,7 +30,7 @@ const Build = () => {
         author={{ name: "Jacqueline Price", role: "CEO JP Fresh Start" }}
         className="mt-12"
       >
-        Working with PSD Studio felt effortless. Their updates were clear,
+        Working with Virginia felt effortless. Her updates were clear,
         consistent, and always arrived before we even had to ask.
       </Blockquote>
     </Section>

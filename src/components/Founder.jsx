@@ -14,7 +14,7 @@ const Founder = () => {
           <div className="relative aspect-[3/4] w-3/4 lg:w-2/3 mx-auto lg:ml-auto overflow-hidden rounded-3xl">
             <Image
               src="/images/virginia-marc.png"
-              alt="Virginia Marc — Founder of PSD Studio"
+              alt="Virginia Marc — Founder of PSDO Studio"
               fill
               quality={100}
               className="object-cover"
@@ -30,12 +30,13 @@ const Founder = () => {
             {/* FIXED: proper wrapper */}
             <div className="mt-6 text-neutral-700 leading-relaxed space-y-4 max-w-md mx-auto lg:max-w-none lg:mx-0 lg:pl-0">
               <p>
-                I’m Virginia Marc, founder and creative lead of PSD Studio. My work sits at
-                the intersection of design, development, and thoughtful strategy—helping small
-                businesses and creators build digital experiences that feel clear, intentional,
-                and deeply human.
+                I’m Virginia Marc, founder and creative lead of PSDO Studio.
+                My work brings together web development, custom software
+                solutions, and creative design to help entrepreneurs,
+                startups, and growing businesses turn ideas into functional,
+                meaningful digital experiences.
               </p>
-
+              
               <p>
                 Before stepping into tech, I earned a B.S. in Biology with a minor in Chemistry
                 and spent more than 15 years in healthcare, where I learned how to listen,

@@ -24,14 +24,14 @@ export const SocialMediaProfiles = [
   },
   {
     title: "Facebook",
-    href: "",
+    href: "https://www.facebook.com/psdostudio/",
     icon: BsFacebook,
     target: "_blank",
     rel: "noopener noreferrer",
   },
   {
     title: "LinkedIn",
-    href: "https://www.linkedin.com/in/virginiamarc/",
+    href: "https://www.linkedin.com/company/psdostudio/",
     icon: BsLinkedin,
     target: "_blank",
     rel: "noopener noreferrer",

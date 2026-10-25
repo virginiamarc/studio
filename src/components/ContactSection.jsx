@@ -2,7 +2,6 @@ import React from "react";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
 import Button from "./Button";
-import Office from "./Office";
 
 const ContactSection = () => {
   return (
@@ -20,16 +19,20 @@ const ContactSection = () => {
           </div>
           <div className="mt-10">
             <div className="h-px w-full bg-gradient-to-r from-[#C85ACF] via-[#8E3CA8] to-[#6A2A82]"></div>
-
+            
             <div className="pt-10">
               <h3 className="font-display text-base font-semibold text-white">
-                Our office
+                Let's connect
               </h3>
-              <Office
-                invert
-                className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-              />
+
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-300">
+                Whether you're planning a new website, developing a
+                custom application, or exploring creative solutions,
+                we're here to help. Connect with us virtually to
+                discuss your project and bring your ideas to life.
+              </p>
             </div>
+
           </div>
         </div>
       </FadeIn>

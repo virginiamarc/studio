@@ -23,25 +23,33 @@ router.post("/", async (req, res) => {
       html: `
         <div style="font-family: Inter, Arial, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px; border: 1px solid #e5e5e5; border-radius: 12px;">
           <div style="text-align: center; margin-bottom: 24px;">
-            <img 
-              src="https://studio-backend-rk21.onrender.com/logo-psd.png"
-              alt="PSD Studio logo"
-              width="120"
-              style="display: block; margin: 0 auto; border: 0; outline: none; text-decoration: none;"
+            
+            <img
+              src="https://studio-backend-rk21.onrender.com/logo-psdo.png"
+              alt="PSDO Studio logo"
+              width="140"
+              style="display:block; margin:0 auto; border:0; outline:none; text-decoration:none;"
             />
+
           </div>
 
           <h2 style="color: #111; font-weight: 600; margin-bottom: 16px;">You're subscribed</h2>
 
-          <p style="color: #444; line-height: 1.6;">
-            Thank you for joining the PSD Studio newsletter. You’ll receive updates, insights, and resources crafted with intention.
+          <p style="color:#444; line-height:1.6;">
+            Thank you for subscribing to the PSDO Studio newsletter!
+            Stay connected for insights, resources, and updates on
+            web development, software solutions, creative design,
+            and digital innovation.
           </p>
-
-          <div style="margin-top: 32px; border-top: 1px solid #eee; padding-top: 16px; color: #777; font-size: 13px;">
-            <strong>PSD Studio</strong><br>
-            Creative Direction & Technical Production<br>
-            <a href="https://studio.pranswendeou.com" style="color: #555;">studio.pranswendeou.com</a>
+          
+          <div style="margin-top:32px; border-top:1px solid #eee; padding-top:16px; color:#777; font-size:13px;">
+            <strong>PSDO Studio</strong><br>
+            Web Development • Software Solutions • Creative Design<br>
+            <a href="https://studio.pranswendeou.com" style="color:#555;">
+              studio.pranswendeou.com
+            </a>
           </div>
+
         </div>
       `
     });

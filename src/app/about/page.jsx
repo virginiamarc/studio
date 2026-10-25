@@ -12,27 +12,33 @@ const AboutPage = () => {
     <>
       <PageIntro eyebrow="About us" title="Our strength is collaboration">
         <p>
-          At PSD Studio, collaboration is at the heart of everything we build. We
-          believe the best digital experiences come from working closely with our
-          clients, understanding their goals, and crafting solutions with intention
-          and clarity.
+          At PSDO Studio, collaboration is at the heart of everything
+          we create. We work closely with entrepreneurs, startups,
+          and growing businesses to understand their goals and
+          transform ideas into powerful digital solutions.
         </p>
+
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            What began as a personal passion for thoughtful design and clean,
-            maintainable development has grown into a studio dedicated to creating
-            meaningful digital products. From nonprofit platforms to full‑stack
-            applications, our work is grounded in accessibility, precision, and
-            real‑world impact.
+            What began as a passion for web development, technology,
+            and creative design has evolved into a studio focused
+            on building meaningful digital experiences. From
+            responsive websites and custom web applications to
+            database-driven software and branding, our work
+            combines thoughtful design with practical functionality.
           </p>
+
           <p>
-            We approach every project with care — blending design, engineering, and
-            strategy to deliver experiences that feel intuitive, modern, and
-            purpose‑driven. Our goal is simple: build work that serves people,
-            supports communities, and stands the test of time.
+            We approach every project with care, blending technical
+            expertise, creativity, and collaboration to deliver
+            accessible, intuitive, and scalable solutions. Our
+            mission is to help businesses strengthen their digital
+            presence, streamline processes, and turn their ideas
+            into lasting results.
           </p>
         </div>
       </PageIntro>
+
       <Container className="mt-16">
         <StatList>
           <StatListItem value="6+" label="Years of experience" />

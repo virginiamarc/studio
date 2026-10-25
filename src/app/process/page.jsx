@@ -11,12 +11,15 @@ const ProcessPage = () => {
     <>
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
-          Our process is built on clarity, collaboration, and thoughtful execution.
-          Every project begins with understanding your goals, continues with
-          intentional design and development, and ends with a polished, reliable
-          product that’s ready to grow with you.
+          At PSDO Studio, our process combines collaboration,
+          creativity, and technical expertise. Every project
+          begins with understanding your business goals, continues
+          through thoughtful planning, design, and development,
+          and concludes with a functional, reliable digital
+          solution built to support your growth.
         </p>
       </PageIntro>
+
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
         {/* Discover */}
         <Discover />

@@ -4,12 +4,10 @@ import { useEffect, useId, useRef, useState } from "react";
 import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 import Container from "./Container";
 import Link from "next/link";
-import Logo from "./Logo";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import Button from "./Button";
 import clsx from "clsx";
-import Office from "./Office";
 import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
 
@@ -28,9 +26,11 @@ const Header = ({
         {/* Logo */}
         <Link href={"/"} aria-label="Home">
           <img
-            src="/logo-psd.svg"
-            alt="PSD Studio logo"
-            className={`h-20 w-auto ${invert ? "brightness-0 invert" : ""}`}
+            src="/logo-psdo.png"
+            alt="PSDO Studio logo"
+            className={`h-24 w-auto max-w-[140px] object-contain sm:h-28 sm:max-w-[170px] ${
+              invert ? "brightness-0 invert" : ""
+            }`}
           />
         </Link>
         <div className="flex items-center gap-x-8">
@@ -174,15 +174,26 @@ const RootLayoutInner = ({ children }) => {
             <div className="relative bg-transparent before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/20">
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
+                  
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">
-                      Our office
+                      Let's connect
                     </h2>
-                    <Office
-                      invert
-                      className="mt-6"
-                    />
+
+                    <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/90">
+                      PSDO Studio provides web development, software solutions,
+                      and creative design services remotely. Have a project in mind?
+                      We'd love to hear from you.
+                    </p>
+
+                    <Link
+                      href="/contact"
+                      className="mt-4 inline-block text-sm font-semibold text-white underline underline-offset-4 transition hover:text-white/80"
+                    >
+                      Start a conversation →
+                    </Link>
                   </div>
+
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
                       Follow us

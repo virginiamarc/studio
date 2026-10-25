@@ -12,10 +12,15 @@ export default function Home() {
         <FadeInStagger>
           <FadeIn className="max-w-3xl">
             <h1 className="font-display text-5xl font-semibold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-              Empowering brands with strategy, creativity, and digital innovation.
+              Transforming Ideas Into Powerful Digital Experiences.
             </h1>
+
+            <p className="mt-5 text-lg font-semibold tracking-wide text-[#8E3CA8]">
+              Custom Websites • Software Solutions • Creative Design
+            </p>
+            
             <p className="mt-6 text-xl text-neutral-600">
-              At PSD Studio, we help entrepreneurs and businesses elevate their identity through strategic design, thoughtful branding, and impactful digital experiences.
+              At PSDO Studio, we help entrepreneurs, startups, and growing businesses bring their ideas to life through custom website development, innovative software solutions, and creative design. From responsive websites and full-stack web applications to branding and digital experiences, we combine technology, functionality, and creativity to build solutions that make a lasting impact.
             </p>
           </FadeIn>
         </FadeInStagger>

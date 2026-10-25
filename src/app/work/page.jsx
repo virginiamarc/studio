@@ -9,11 +9,12 @@ const WorkPage = () => {
         title="Digital experiences crafted with intention."
       >
         <p>
-          At PSD Studio, every project is built with clarity, precision, and a
-          deep respect for thoughtful design. From full‑stack applications to
-          nonprofit websites and modern UI experiences, our work reflects a
-          commitment to clean architecture, accessible interfaces, and
-          real‑world impact.
+          At PSDO Studio, we transform ideas into functional,
+          engaging digital solutions. Our work spans responsive
+          websites, full-stack web applications, database-driven
+          software, and creative design. Each project reflects
+          our commitment to usability, accessibility, thoughtful
+          design, and real-world impact.
         </p>
       </PageIntro>
     </>

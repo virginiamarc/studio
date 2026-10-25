@@ -18,9 +18,9 @@ router.post("/", async (req, res) => {
 
           <div style="text-align: center; margin-bottom: 24px;">
             <img 
-              src="https://studio-backend-rk21.onrender.com/logo-psd.png"
-              alt="PSD Studio logo"
-              width="120"
+              src="https://studio-backend-rk21.onrender.com/logo-psdo.png"
+              alt="PSDO Studio logo"
+              width="140"
               style="display:block; margin:0 auto; border:0; outline:none; text-decoration:none;"
             />
           </div>
@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
           <p><strong>Message:</strong><br>${req.body.message}</p>
 
           <div style="margin-top: 24px; border-top: 1px solid #eee; padding-top: 16px; color: #777; font-size: 13px;">
-            PSD Studio — Notification
+            PSDO Studio — Contact Form Notification
           </div>
         </div>
       `,
@@ -44,7 +44,7 @@ router.post("/", async (req, res) => {
     // Auto‑response to the client
     await sendEmail({
       to: req.body.email,
-      subject: "Thank you for contacting PSD Studio",
+      subject: "Thank you for contacting PSDO Studio",
       html: `
     <!DOCTYPE html>
     <html>
@@ -58,9 +58,9 @@ router.post("/", async (req, res) => {
                 <tr>
                   <td align="center" style="padding-bottom:24px;">
                     <img 
-                      src="https://studio-backend-rk21.onrender.com/logo-psd.png" 
-                      alt="PSD Studio" 
-                      width="120" 
+                      src="https://studio-backend-rk21.onrender.com/logo-psdo.png" 
+                      alt="PSDO Studio" 
+                      width="140" 
                       style="display:block; border:0; outline:none; text-decoration:none;"
                     />
                   </td>
@@ -74,9 +74,15 @@ router.post("/", async (req, res) => {
 
                 <tr>
                   <td style="font-size:15px; line-height:1.6; color:#333;">
-                    Hi ${req.body.name},<br><br>
-                    Your message has been received. I’ll review it and get back to you shortly.  
-                    If your inquiry is time‑sensitive, feel free to reply directly to this email.
+                      Hi ${req.body.name},<br><br>
+
+                      Thank you for contacting PSDO Studio!
+
+                      We've received your inquiry and appreciate your interest
+                      in our services. We'll review your message and respond
+                      as soon as possible.
+
+                      We look forward to learning more about your project.
                   </td>
                 </tr>
 
@@ -87,8 +93,8 @@ router.post("/", async (req, res) => {
                 <tr>
                   <td style="font-size:13px; line-height:1.5; color:#777;">
                     <span style="display:none;">x</span>
-                    <strong>PSD Studio</strong><br>
-                    Creative Direction & Technical Production<br>
+                    <strong>PSDO Studio</strong><br>
+                    Web Development • Software Solutions • Creative Design<br>
                     <a href="https://studio.pranswendeou.com" style="color:#555; text-decoration:none;">
                       studio.pranswendeou.com
                     </a>

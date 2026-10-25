@@ -6,7 +6,7 @@ export const sendEmail = async ({ to, subject, html }) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "PSD Studio <info@pranswendeou.com>",
+      from: "PSDO Studio <info@pranswendeou.com>",
       to,
       subject,
       html,
