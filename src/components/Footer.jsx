@@ -59,11 +59,11 @@ const NewsletterForm = () => {
   };
   return (
     <form onSubmit={handleSubmit} className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+      <h2 className="font-display text-sm font-semibold tracking-wider text-white">
         Sign up for our newsletter
       </h2>
 
-      <p className="mt-4 text-sm text-neutral-700">
+      <p className="mt-4 text-sm text-neutral-300">
         Subscribe for insights on web development, software
         solutions, creative design, and digital innovation.
       </p>
@@ -76,7 +76,7 @@ const NewsletterForm = () => {
           aria-label="Email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
+          className="block w-full rounded-2xl border border-white/20 bg-white/10 py-4 pl-6 pr-20 text-base/6 text-white ring-4 ring-transparent transition placeholder:text-neutral-400 focus:border-[#C85ACF] focus:outline-none focus:ring-[#C85ACF]/20"
         />
 
         <div className="absolute inset-y-1 right-1 flex justify-end">
@@ -93,43 +93,51 @@ const NewsletterForm = () => {
         </div>
       </div>
 
-      {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+      {error && (
+        <p className="mt-2 text-sm text-red-400" role="alert">
+          {error}
+        </p>
+      )}
+
       {submitted && (
-        <p className="text-green-600 text-sm mt-2">
+        <p className="mt-2 text-sm text-green-400" role="status">
           You’re subscribed — thank you.
         </p>
       )}
+
     </form>
   );
 };
 
 const Footer = () => {
-  return (
-    <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
-          <FooterNavigation />
-          <div className="flex lg:justify-end">
-            <NewsletterForm />
+  return (   
+    <footer className="mt-24 w-full bg-[#0B0B0F] py-16 sm:mt-32 sm:py-20 lg:mt-40">
+      <Container>
+        <FadeIn>
+          <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+            <FooterNavigation />
+            <div className="flex lg:justify-end">
+              <NewsletterForm />
+            </div>
           </div>
-        </div>
-
-        <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-          <Link href="/" aria-label="Home">
-            <img
-              src="/logo-psdo.png"
-              alt="PSDO Studio logo"
-              className="h-16 w-auto object-contain transition hover:opacity-80"
-            />
-          </Link>
           
-          <p className="text-sm text-neutral-700">
-            © {new Date().getFullYear()} PSDO Studio.
-            A brand of PRAN SWEN DE OU LLC. All rights reserved.
-          </p>
-        </div>
-      </FadeIn>
-    </Container>
+          <div className="mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-white/20 pt-12">
+            <Link href="/" aria-label="Home">
+              <img
+                src="/logo-psdo.png"
+                alt="PSDO Studio logo"
+                className="h-16 w-auto object-contain transition hover:opacity-80"
+              />
+            </Link>
+            
+            <p className="text-sm text-neutral-400">
+              © {new Date().getFullYear()} PSDO Studio.
+              A brand of PRAN SWEN DE OU LLC. All rights reserved.
+            </p>
+          </div>
+        </FadeIn>
+      </Container>
+    </footer>
   );
 };
 

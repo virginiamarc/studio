@@ -7,7 +7,6 @@ import Link from "next/link";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import Button from "./Button";
-import clsx from "clsx";
 import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
 
@@ -28,16 +27,11 @@ const Header = ({
           <img
             src="/logo-psdo.png"
             alt="PSDO Studio logo"
-            className={`h-24 w-auto max-w-[140px] object-contain sm:h-28 sm:max-w-[170px] ${
-              invert ? "brightness-0 invert" : ""
-            }`}
+            className="h-24 w-auto max-w-[140px] object-contain sm:h-28 sm:max-w-[170px]"
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button 
-            href="/contact" 
-            variant={invert ? "invert" : "gradient"}
-          >
+          <Button href="/contact" variant="gradient">
             Contact us
           </Button>
           <button
@@ -48,16 +42,11 @@ const Header = ({
             aria-controls={panelId}
             className="-m-2.5 p-2.5 transition"
             aria-label="Toggle navigation"
-          >
-            <Icon 
-              className={clsx(
-                "h-6 w-6",
-                invert ? "fill-white" : "fill-[#C85ACF]"
-              )}
+          >      
+            <Icon
+              className="h-6 w-6 fill-[#C85ACF] transition-colors duration-300 hover:fill-white"
             />
           </button>
-
-
         </div>
       </div>
     </Container>
@@ -127,7 +116,7 @@ const RootLayoutInner = ({ children }) => {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-          className="absolute left-0 right-0 top-2 z-40 pt-14"
+          className="absolute left-0 right-0 top-2 z-40 bg-[#0B0B0F] pt-14"
           aria-hidden={expanded ? "true" : undefined}
           inert={expanded}
         >
@@ -153,7 +142,8 @@ const RootLayoutInner = ({ children }) => {
           aria-hidden={expanded ? undefined : "true"}
           inert={!expanded}
         >
-          <motion.div layout className="bg-transparent">
+          
+          <motion.div layout className="bg-[#0B0B0F]">
             <div ref={navRef} className="bg-transparent pb-16 pt-14">
               <Header
                 invert

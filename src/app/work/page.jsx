@@ -1,4 +1,5 @@
 import PageIntro from "@/components/PageIntro";
+import FeaturedProjects from "@/components/FeaturedProjects";
 import React from "react";
 
 const WorkPage = () => {
@@ -17,6 +18,8 @@ const WorkPage = () => {
           design, and real-world impact.
         </p>
       </PageIntro>
+
+      <FeaturedProjects />
     </>
   );
 };
